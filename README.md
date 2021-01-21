@@ -1,2 +1,2 @@
 # finvizscrape
-Scrape data to Finviz.com/screener.ashx
+Usa il file FinvizScrape.ipynb per scaricare i dati da Finviz
