@@ -6,7 +6,7 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setup(name='finvizscrape',
-      version='1.0.0',
+      version='2.0.0',
       description='Scrape data to Finviz.com/screener.ashx',
       long_description=README,
       long_description_content_type="text/markdown",
