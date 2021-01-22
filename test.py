@@ -1,5 +1,5 @@
 import unittest
-import finvizscrape as fs
+import finvizscrape as fl
 
 class TestFinvizlite(unittest.TestCase):
     def test_rows_to_pages(self):
