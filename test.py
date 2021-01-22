@@ -1,5 +1,5 @@
 import unittest
-import finvizscrape as fl
+import finvizscrape as fs
 
 class TestFinvizlite(unittest.TestCase):
     def test_rows_to_pages(self):
@@ -10,19 +10,19 @@ class TestFinvizlite(unittest.TestCase):
         self.assertEqual(fl.rows_to_pages(0), 0)
 
     def test_screener_overview_length(self):
-        df = fl.scrape("https://finviz.com/screener.ashx?v=111")
+        df = fs.scrape("https://finviz.com/screener.ashx?v=111")
         self.assertEqual(len(df), 20)
 
     def test_sp500(self):
-        df = fl.scrape_all("https://finviz.com/screener.ashx?v=111&f=idx_sp500&o=-marketcap")
+        df = fs.scrape_all("https://finviz.com/screener.ashx?v=111&f=idx_sp500&o=-marketcap")
         self.assertEqual(len(df), 505)
 
     def test_all(self):
-        df = fl.scrape_all("https://finviz.com/screener.ashx?v=111&o=-marketcap")
+        df = fs.scrape_all("https://finviz.com/screener.ashx?v=111&o=-marketcap")
         self.assertGreaterEqual(len(df), 7000)
 
     def test_max_rows(self):
-        df = fl.scrape_all("https://finviz.com/screener.ashx?v=111&o=-marketcap", rows=35)
+        df = fs.scrape_all("https://finviz.com/screener.ashx?v=111&o=-marketcap", rows=35)
         self.assertEqual(len(df), 35)
 
 if __name__ == "__main__":
